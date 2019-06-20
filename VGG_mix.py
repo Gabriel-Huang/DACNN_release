@@ -1,14 +1,12 @@
-'''VGG11/13/16/19 in Pytorch.'''
+'''
+DACNN(mixed) based on VGG.
+
+'''
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
 cfg = {
-    '3_layer': ['c', 'M','c','M'],
-    '5_layer': ['c', 'M', 'c', 'M', 'c', 'M', 'c', 'M'],
-    '7_layer': ['c',' M', 'c', 'M', 'c', 'c', 'M', 'c', 'c','M'],
-    '9_layer': ['c', 'c',' M', 'c', 'c', 'M', 'c', 'c', 'M', 'c', 'c', 'M'],
-    '11_layer': ['c', 'c',' M', 'c', 'c', 'M', 'c', 'c', 'c', 'M', 'c', 'c', 'c', 'M'],
     'VGG16_fix': [64, 64, 'M', 128, 128, 'M'],
     'VGG11': [64, 'M', 128, 'M', 256, 'M', 512, 'M', 512, 'M'],
     'VGG13': [64, 64, 'M', 128, 128, 'M', 256, 256, 'M', 512, 512, 'M', 512, 512, 'M'],

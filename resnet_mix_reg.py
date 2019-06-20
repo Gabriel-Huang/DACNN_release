@@ -1,3 +1,7 @@
+'''
+DACNN18 with regulaors and mixed architecture.
+
+'''
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -35,9 +39,12 @@ class BasicBlock_Fix(nn.Module):
 class resnet_mix(nn.Module):
     def __init__(self, num_classes=100):
         super(resnet_mix, self).__init__()
+
+        # This is for ResNet 18, for more layers, please change "num_blocks"
+        # accordingly
+
         num_blocks = [3,4,6,3]
         self.in_planes = 64
-        #num_blocks = [2,2,2,2]
 
         self.conv1 = nn.Sequential(nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False),
                            nn.BatchNorm2d(64),

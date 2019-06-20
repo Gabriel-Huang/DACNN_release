@@ -1,3 +1,8 @@
+'''
+DACNN14(plain) based on VGG.
+
+'''
+
 import torch
 import torch.nn as nn
 

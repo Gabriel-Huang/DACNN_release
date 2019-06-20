@@ -1,4 +1,5 @@
-'''VGG11/13/16/19 in Pytorch.'''
+'''Small Networks for experiments'''
+
 import torch
 import torch.nn as nn
 
